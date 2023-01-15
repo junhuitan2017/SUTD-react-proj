@@ -1,0 +1,36 @@
+$ball-sizes: (
+    checker: 10px,
+    option: 20px,
+    display: 40px
+);
+
+main {
+    display: flex;
+    justify-content: center;
+}
+
+th {
+    padding: 25px 0;
+}
+
+@each $type,
+$size in $ball-sizes {
+    .ball-#{$type} {
+        height: $size;
+        width: $size;
+        border: 1px solid black;
+        border-radius: 100%;
+        cursor: pointer;
+    }
+}
+
+#grid {
+    display: flex;
+    flex-flow: column;
+    margin: 25px;
+}
+
+#user-option {
+    display: flex;
+    column-gap: 5px;
+}
